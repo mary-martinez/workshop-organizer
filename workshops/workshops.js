@@ -3,9 +3,15 @@ import { checkAuth, logout, getWorkshops, deleteParticipant } from '../fetch-uti
 checkAuth();
 
 const logoutButton = document.getElementById('logout');
+const addParticipantButton = document.getElementById('createParticipant');
+
 
 logoutButton.addEventListener('click', () => {
     logout();
+});
+
+addParticipantButton.addEventListener('click', () => {
+    location.replace('../create');
 });
 
 async function displayWorkshops() {
@@ -27,7 +33,7 @@ async function displayWorkshops() {
                 await deleteParticipant(participant.id);
                 await displayWorkshops();
             });
-            workshopDiv.append(div);
+            workshopDiv.append(workshopName, div);
         }
         workshopsEl.append(workshopName, workshopDiv);
 
