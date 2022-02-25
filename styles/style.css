@@ -111,6 +111,18 @@ footer {
     top: 90px;
 }
 
+#createParticipant {
+    position: fixed;
+    left: 20px;
+    top: 90px;
+}
+
+#to-workshops {
+    position: fixed;
+    left: 20px;
+    top: 90px;
+}
+
 .auth-main {
     display: flex;
     flex-direction: row;
